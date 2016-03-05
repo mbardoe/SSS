@@ -1,0 +1,38 @@
+<template name="MyReservations">
+	{{> layout}}
+  <div class="container">
+  <h1 class="white">Your Reserved Books</h1>
+    {{#if noBooks}}
+      <h1 class="white">Nothing here</h1>
+    {{/if}}
+  </div>
+
+
+  <div class="BookItem">
+	
+  <ul>
+  {{#each search}}
+          <li>  
+          <div class="text">
+            <div id="image">{{> reservedImage}}</div>
+            <div id="author">{{title}} <br>ISBN:{{isbn}} <br>Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
+            {{debug}}
+          </div>
+          </li>
+	{{/each}}
+  </ul>
+
+</div>
+</template>
+
+<template name="reservedImage">
+<div class="image-container">
+  <div class="row">
+    <div class="col-md-12">
+      <a href="/reservationDetail/{{_id}}" class="thumbnail">
+        <img src="{{url}}" />
+      </a>
+    </div>
+  </div>
+  </div>
+</template>

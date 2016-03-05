@@ -1,0 +1,42 @@
+
+p{
+	text-align: center;
+	font-size: 50px;
+	color: black;
+	font-family: Verdana;
+}
+/*h2{
+	text-align: center;
+	font-size: 50px;
+	color: black;
+	font-family: Verdana;
+	padding-top: 50px;
+}*/
+form{
+	position: relative;
+	padding-top: -200px;
+	padding-bottom: 200px;
+	margin-top: 50px;
+	height: 330px;
+}
+form p{
+	font-size: 40px;
+	font-family: Verdana;
+
+}
+form p input{
+	font-size: 40px;
+}
+.form-group{
+	height: 120px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top:20px;
+	padding-bottom: 0px;
+}
+.form-group3{
+	padding-top: 40px;
+	height: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}

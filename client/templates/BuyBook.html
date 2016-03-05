@@ -1,0 +1,64 @@
+<template name = "buybook">
+  {{>layout}}
+  <div class="container">
+    {{> searchBox }}
+    {{> searchResult}}
+
+    <h1 class="white">Search Results</h1>
+    {{#if noBooks}}
+      <h2 class="white">Nothing here</h2>
+    {{/if}}
+    <div class="listviewbuybook">
+      
+      <ul>
+      {{#each search}}
+      <li>
+        <a href="/buybook2/{{_id}}">
+        <div class="text">
+        <div id="image">{{> image}}</div>
+          <div id="author">
+             {{title}} <br>ISBN:{{isbn}}  <br>
+            Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
+          {{debug}}
+        </div>
+        </a>
+      </li>
+      {{/each}}
+      </ul>
+
+    </div>
+  </div>
+
+</template>
+
+
+<template name="searchBox">
+  <input type="text" id="search-box" placeholder="search books here" />
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="searchbyisbn"> Search by ISBN
+    </label>
+  </div>
+</template>
+
+<template name="searchResult">
+  <div id='search-result'>
+    <div id="search-meta">
+      {{#if isLoading}}
+      searching ...
+      {{/if}}
+    </div>
+
+    {{#each getPackages}}
+    <div class="package">
+      <h4 class="name">
+        <a href="{{git}}" target="_blank">{{{packageName}}}</a>
+      </h4>
+      <div class="description">
+        {{{description}}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</template>
+

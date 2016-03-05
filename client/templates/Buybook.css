@@ -1,0 +1,69 @@
+.white {
+  color: white;
+}
+
+li{
+  font-size: 20px;
+  color: white;
+  font-family: Verdana;
+  padding-top: 30px;
+  text-align: left;
+}
+
+#author{
+  font-size: 2em;
+  margin-left: 2em;
+}
+
+#image{
+  width: auto;
+  height: 150px;
+}
+
+.text{
+  font-size: 10px;
+  width:800px;
+  position: relative;
+  display: flex;
+  color:white;
+  flex-direction: row;
+  align-items: center;
+}
+
+#search-box {
+  padding: 10px;
+  width: 600px;
+  border: 1px solid #eee;
+  outline: 0;
+  font-size: 15px;
+}
+.checkbox{
+  color:white;
+}
+#search-result {
+
+}
+
+#search-meta {
+  font-size: 13px;
+  color: #666;
+  height: 15px;
+}
+
+.package {
+  width: 600px;
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+}
+.listviewbuybook{
+  overflow: scroll;
+  height: 400px;
+} 
+
+.package .name {
+  font-weight: 400;
+}
+
+.text:hover{
+  opacity: 0.5;
+}
